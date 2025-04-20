@@ -1,4 +1,5 @@
 ﻿using AcunMedyaTravelProject.Context;
+using AcunMedyaTravelProject.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,46 @@ namespace AcunMedyaTravelProject.Controllers
         {
             var values = db.Testimonials.ToList();
             return View(values);
+        }
+        public ActionResult DeleteTestimonial(int id)
+        {
+            var values = db.Testimonials.Find(id);
+            db.Testimonials.Remove(values);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult CreateTestimonial()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateTestimonial(Testimonial testimonial)
+        {
+            db.Testimonials.Add(testimonial);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateTestimonial(int id)
+        {
+            var values = db.Testimonials.Find(id);
+            return View(values);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateTestimonial(Testimonial model)
+        {
+            var values = db.Testimonials.Find(model.TestimonialID);
+            values.TestimonialName = model.TestimonialName;
+            values.Description = model.Description;
+            values.ImageURL = model.ImageURL;
+            values.Title = model.Title;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

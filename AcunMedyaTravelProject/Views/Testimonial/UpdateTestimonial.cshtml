@@ -1,0 +1,24 @@
+﻿@model AcunMedyaTravelProject.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateTestimonial</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.TestimonialID)
+    <label>Referans Adı</label>
+    @Html.TextBoxFor(x => x.TestimonialName)
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageURL)
+    <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    <button>Güncelle</button>
+</form>

@@ -920,6 +920,14 @@
     <Content Include="Views\Destinations\UpdateDestinations.cshtml" />
     <Content Include="Views\Services\CreateServices.cshtml" />
     <Content Include="Views\Services\UpdateServices.cshtml" />
+    <Content Include="Views\Slider\CreateSlider.cshtml" />
+    <Content Include="Views\Slider\UpdateSlider.cshtml" />
+    <Content Include="Views\Sponsor\CreateSponsor.cshtml" />
+    <Content Include="Views\Sponsor\UpdateSponsor.cshtml" />
+    <Content Include="Views\Subscription\CreateSubscription.cshtml" />
+    <Content Include="Views\Subscription\UpdateSubscription.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
