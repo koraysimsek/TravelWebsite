@@ -1,0 +1,38 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Booking>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Rezervasyonlar</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>BookingID</th>
+                <th>Başlık</th>
+                <th>Açıklama</th>
+                <th>Fotoğraf</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BookingID</td>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td>@item.ImageURL</td>
+                    <td><a href="/Booking/UpdateBooking/@item.BookingID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Booking/DeleteBooking/@item.BookingID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <a href="/Booking/CreateBooking/" class="btn btn-success">Rezervasyon Oluştur</a>
+</div>

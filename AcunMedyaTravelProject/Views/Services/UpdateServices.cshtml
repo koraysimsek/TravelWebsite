@@ -1,0 +1,21 @@
+﻿@model AcunMedyaTravelProject.Entities.Services
+@{
+    ViewBag.Title = "UpdateServices";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateServices</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ServicesID)
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageURL)
+    <br />
+    <button>Güncelle</button>
+</form>

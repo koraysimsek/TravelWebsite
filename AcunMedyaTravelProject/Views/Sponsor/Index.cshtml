@@ -1,0 +1,34 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Sponsor>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Sponsorlar</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>SponsorID</th>
+                <th>Fotoğraf</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SponsorID</td>
+                    <td>@item.ImageURL</td>
+                    <td><a href="/Sponsor/UpdateSponsor/@item.SponsorID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Sponsor/DeleteSponsor/@item.SponsorID" class="btn btn-danger">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <a href="/Sponsor/CreateSponsor/" class="btn btn-success">Sponsor Oluştur</a>
+</div>

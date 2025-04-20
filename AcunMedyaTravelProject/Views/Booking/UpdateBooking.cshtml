@@ -1,0 +1,21 @@
+﻿@model AcunMedyaTravelProject.Entities.Booking
+@{
+    ViewBag.Title = "UpdateBooking";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateBooking</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.BookingID)
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x => x.ImageURL)
+    <br />
+    <button>Güncelle</button>
+</form>

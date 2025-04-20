@@ -6,13 +6,13 @@ namespace AcunMedyaTravelProject.Context
 {
     public class AcunMedyaDbContext:DbContext
     {
-        DbSet<Booking> Bookings { get; set; }
-        DbSet<Category> Categories { get; set; }
-        DbSet<Sponsor> Sponsors { get; set; }
-        DbSet<Testimonial> Testimonials { get; set; }
-        DbSet<Slider> Slider { get; set; }
-        DbSet<Services> Services { get; set; }
-        DbSet<Destinations> Destinations { get; set; }
-        DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Slider> Slider { get; set; }
+        public DbSet<Services> Services { get; set; }
+        public DbSet<Destinations> Destinations { get; set; }
+        public DbSet<Subscription> Subscriptions { get; set; }
     }
 }
