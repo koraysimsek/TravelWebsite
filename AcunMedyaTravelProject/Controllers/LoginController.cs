@@ -37,5 +37,9 @@ namespace AcunMedyaTravelProject.Controllers
 
             return RedirectToAction("Index", "Dashboard");
         }
+        public ActionResult LogOut()
+        {
+            return View();
+        }
     }
 }
