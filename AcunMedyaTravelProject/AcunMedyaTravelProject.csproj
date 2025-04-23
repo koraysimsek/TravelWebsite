@@ -122,13 +122,16 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Controllers\SponsorController.cs" />
     <Compile Include="Controllers\SubscriptionController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Booking.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Destinations.cs" />
@@ -175,6 +178,10 @@
     <Compile Include="Migrations\202504201141071_m9.cs" />
     <Compile Include="Migrations\202504201141071_m9.Designer.cs">
       <DependentUpon>202504201141071_m9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202504230937257_m10.cs" />
+    <Compile Include="Migrations\202504230937257_m10.Designer.cs">
+      <DependentUpon>202504230937257_m10.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -928,6 +935,8 @@
     <Content Include="Views\Subscription\UpdateSubscription.cshtml" />
     <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -987,6 +996,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504201141071_m9.resx">
       <DependentUpon>202504201141071_m9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202504230937257_m10.resx">
+      <DependentUpon>202504230937257_m10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

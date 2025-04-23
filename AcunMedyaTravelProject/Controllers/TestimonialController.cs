@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace AcunMedyaTravelProject.Controllers
 {
+    [Authorize]
     public class TestimonialController : Controller
     {
         // GET: Testimonial

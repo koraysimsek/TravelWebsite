@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace AcunMedyaTravelProject.Controllers
 {
+    [Authorize]
     public class SponsorController : Controller
     {
         // GET: Sponsor
