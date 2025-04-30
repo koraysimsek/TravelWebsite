@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Sayfa Bulunamadı</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #ffffff;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @@keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 400px;
+        }
+
+        a {
+            padding: 12px 24px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+            a:hover {
+                background: rgba(0, 0, 0, 0.5);
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <h2>Sayfa Bulunamadı</h2>
+    <p>Üzgünüz, böyle bir sayfa bulunamadı. Bağlantı hatalı olabilir veya sayfa silinmiş olabilir.</p>
+    <a href="@Url.Action("Index", "Dashboard")">Anasayfa'ya Dön</a>
+</body>
+</html>

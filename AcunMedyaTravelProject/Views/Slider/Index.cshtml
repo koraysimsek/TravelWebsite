@@ -30,7 +30,7 @@
                     <td>@item.Description2</td>
                     <td>@item.ImageURL</td>
                     <td><a href="/Slider/UpdateSlider/@item.SliderID" class="btn btn-success">Güncelle</a></td>
-                    <td><a href="/Slider/DeleteSlider/@item.SliderID" class="btn btn-danger">Sil</a></td>
+                    <td><button class="btn btn-danger" onclick="Delete(@item.SliderID)">Sil</button></td>
                 </tr>
             }
 
@@ -38,3 +38,27 @@
     </table>
     <a href="/Slider/CreateSlider/" class="btn btn-success">Slider Oluştur</a>
 </div>
+
+<script>
+    function Delete(id)
+    {
+        Swal.fire({
+            title: "Emin misin?",
+            text: "Bu işlemi geri döndüremeyeceksin!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Evet!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Silindi!",
+                    text: "Veriniz silindi.",
+                    icon: "success"
+                });
+                window.location.href = '/Category/DeleteCategory/' + id;
+            }
+        });
+    }
+</script>
