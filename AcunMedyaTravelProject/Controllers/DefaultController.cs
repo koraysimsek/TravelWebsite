@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AcunMedyaTravelProject.Context;
+using AcunMedyaTravelProject.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +11,7 @@ namespace AcunMedyaTravelProject.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
+        AcunMedyaDbContext db = new AcunMedyaDbContext();
         public ActionResult Index()
         {
             return View();
@@ -49,9 +52,19 @@ namespace AcunMedyaTravelProject.Controllers
             return PartialView();
         }
 
-        public PartialViewResult PartialSubscription()
+        [HttpGet]
+        public PartialViewResult PartialSubscription(Subscription model)
         {
-            return PartialView();
+            if (ModelState.IsValid)
+            {
+                db.Subscriptions.Add(model);
+                db.SaveChanges();
+                return Json(new { succes = true, message = "Tebrikler Abone Oldunuz" });
+            }
+            else
+            {
+                return Json(new { succes = false, message = "Hata Abone Olamadınız" });
+            }
         }
     }
 }

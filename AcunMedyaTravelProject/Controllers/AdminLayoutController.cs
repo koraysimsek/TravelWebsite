@@ -25,5 +25,10 @@ namespace AcunMedyaTravelProject.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult PartialNavbar()
+        {
+            return PartialView();
+        }
     }
 }

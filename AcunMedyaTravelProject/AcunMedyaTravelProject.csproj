@@ -1107,6 +1107,7 @@
     <Content Include="Views\Default\PartialSlider.cshtml" />
     <Content Include="Views\Default\PartialSponsor.cshtml" />
     <Content Include="Views\Default\PartialSubscription.cshtml" />
+    <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
