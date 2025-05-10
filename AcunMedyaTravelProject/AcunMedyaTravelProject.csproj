@@ -1108,6 +1108,7 @@
     <Content Include="Views\Default\PartialSponsor.cshtml" />
     <Content Include="Views\Default\PartialSubscription.cshtml" />
     <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
+    <Content Include="Views\Services\SearchServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
