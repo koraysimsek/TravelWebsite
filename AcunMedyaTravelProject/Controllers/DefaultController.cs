@@ -39,7 +39,8 @@ namespace AcunMedyaTravelProject.Controllers
 
         public PartialViewResult PartialService()
         {
-            return PartialView();
+            var values = db.Services.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialSlider()

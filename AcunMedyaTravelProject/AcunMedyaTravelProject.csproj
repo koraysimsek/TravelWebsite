@@ -257,6 +257,7 @@
     <Content Include="jadoo\public\assets\img\hero\hero-bg.svg" />
     <Content Include="jadoo\public\assets\img\hero\hero-img.png" />
     <Content Include="jadoo\public\assets\img\hero\play.svg" />
+    <Content Include="jadoo\public\assets\img\hero\seyahat sitesine kullanacağım eline bavulu sırtında çantası olan kadın bir seyahatçi.jpg" />
     <Content Include="jadoo\public\assets\img\hero\shape.svg" />
     <Content Include="jadoo\public\assets\img\icons\down.svg" />
     <Content Include="jadoo\public\assets\img\icons\up.svg" />
@@ -1153,30 +1154,39 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202504191925301_m1.resx">
       <DependentUpon>202504191925301_m1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191931571_m2.resx">
       <DependentUpon>202504191931571_m2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191945227_m3.resx">
       <DependentUpon>202504191945227_m3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191947397_m4.resx">
       <DependentUpon>202504191947397_m4.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191951388_m5.resx">
       <DependentUpon>202504191951388_m5.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504191952492_m6.resx">
       <DependentUpon>202504191952492_m6.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504192335330_m7.resx">
       <DependentUpon>202504192335330_m7.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504201133423_m8.resx">
       <DependentUpon>202504201133423_m8.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504201141071_m9.resx">
       <DependentUpon>202504201141071_m9.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504230937257_m10.resx">
       <DependentUpon>202504230937257_m10.cs</DependentUpon>
