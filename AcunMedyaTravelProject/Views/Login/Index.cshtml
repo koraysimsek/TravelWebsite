@@ -4,32 +4,83 @@
 }
 
 <!DOCTYPE html>
-
-<html>
+<html lang="tr">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giriş Yap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #2575fc;
+        }
+
+        .btn-primary {
+            background-color: #2575fc;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #1a5fd0;
+            }
+    </style>
 </head>
 <body>
-    <div style="width:300px;margin:100px auto;padding:20px;border:1px solid red; border-radius:10px">
-        
+
+    <div class="login-box">
+        <h4 class="text-center mb-4">Giriş Yap</h4>
+
         <form action="/Login/Index" method="post">
-            <div>
-                <label>Kullanıcı adı</label>
-                <input type="text" name="UserName" style="width:100%" />
+            <div class="mb-3">
+                <label for="username" class="form-label">Kullanıcı Adı</label>
+                <input type="text" class="form-control" id="username" name="UserName" required />
             </div>
 
-            <div style="margin-top:10px">
-                <label>Parola</label>
-                <input type="password" name="Password" style="width:100%" />
+            <div class="mb-3">
+                <label for="password" class="form-label">Parola</label>
+                <input type="password" class="form-control" id="password" name="Password" required />
             </div>
-            <br /><br />
-            <input type="submit" value="Giriş Yap" style="width:100%;padding:5px" />
+
+            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
         </form>
-        @if (ViewData.ModelState.IsValid)
-            {
-                <p style="color:red">@Html.ValidationSummary()</p>
-            }
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger d-flex align-items-center mt-3 fade show" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill me-2" viewBox="0 0 16 16">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.964 0L.165 13.233c-.457.778.091 1.767.982 1.767h13.707c.89 0 1.438-.99.982-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+                <div>
+                    @Html.ValidationSummary()
+                </div>
+            </div>
+        }
+
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

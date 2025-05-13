@@ -189,6 +189,10 @@
     <Compile Include="Migrations\202504301815484_m11.Designer.cs">
       <DependentUpon>202504301815484_m11.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202505131806332_m12.cs" />
+    <Compile Include="Migrations\202505131806332_m12.Designer.cs">
+      <DependentUpon>202505131806332_m12.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1106,9 +1110,14 @@
     <Content Include="Views\Default\PartialService.cshtml" />
     <Content Include="Views\Default\PartialSlider.cshtml" />
     <Content Include="Views\Default\PartialSponsor.cshtml" />
-    <Content Include="Views\Default\PartialSubscription.cshtml" />
     <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
     <Content Include="Views\Services\SearchServices.cshtml" />
+    <Content Include="Views\Booking\SearchBooking.cshtml" />
+    <Content Include="Views\Default\PartialSubscription.cshtml" />
+    <Content Include="Views\Destinations\SearchDestinations.cshtml" />
+    <Content Include="Views\Testimonial\SearchServices.cshtml" />
+    <Content Include="Views\Testimonial\SearchTestimonial.cshtml" />
+    <Content Include="Views\Subscription\SearchSubscription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1174,6 +1183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202504301815484_m11.resx">
       <DependentUpon>202504301815484_m11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505131806332_m12.resx">
+      <DependentUpon>202505131806332_m12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

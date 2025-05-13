@@ -8,12 +8,14 @@
 
 <form method="get" action="/Services/SearchServices">
     <div class="form-group">
-        <input type="text" name="searchText" placeholder="Başlık veya Açıklamaya göre ara" value="@Request.QueryString["searchText"]" />
+        <input type="text" class="form-control" style="width:256px" name="searchText" placeholder="Başlık veya Açıklamaya göre ara" value="@Request.QueryString["searchText"]" />
     </div>
 
     <button type="submit" class="btn btn-primary">Ara</button>
 
 </form>
+
+<br />
 
 @if (Model.Any())
 {

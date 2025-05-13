@@ -1,0 +1,45 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Subscription>
+@{
+    ViewBag.Title = "SearchSubscription";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>SearchSubscription</h2>
+
+<form method="get" action="/Subscription/SearchSubscription">
+    <div class="form-group">
+        <input type="email" class="form-control" style="width:256px" name="searchText" placeholder="E-postaya göre ara" value="@Request.QueryString["searchText"]" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ara</button>
+
+</form>
+
+<br />
+
+@if (Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>SubscriptionID</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SubscriptionID</td>
+                    <td>@item.Email</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Hiç bir veri bulunamadı</div>
+}

@@ -52,18 +52,18 @@ namespace AcunMedyaTravelProject.Controllers
             return PartialView();
         }
 
-        [HttpGet]
+        [HttpPost]
         public JsonResult PartialSubscription(Subscription model)
         {
             if (ModelState.IsValid)
             {
                 db.Subscriptions.Add(model);
                 db.SaveChanges();
-                return Json(new { succes = true, message = "Tebrikler Abone Oldunuz" });
+                return Json(new { success = true, message = "Tebrikler Abone Oldunuz" });
             }
             else
             {
-                return Json(new { succes = false, message = "Hata Abone Olamadınız" });
+                return Json(new { success = false, message = "Hata Abone Olamadınız" });
             }
         }
     }

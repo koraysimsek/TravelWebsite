@@ -58,5 +58,12 @@ namespace AcunMedyaTravelProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult SearchDestinations(string searchText)
+        {
+            var result = string.IsNullOrEmpty(searchText) ? new List<Destinations>() : db.Destinations.Where(x => x.Title.Contains(searchText) || x.Description.Contains(searchText)).ToList();
+
+            return View(result);
+        }
     }
 }

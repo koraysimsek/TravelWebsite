@@ -9,7 +9,7 @@
                 <form class="row g-3 align-items-center w-lg-75 mx-auto" id="subscribeForm">
                     <div class="col-sm">
                         <div class="input-group-icon">
-                            <input class="form-control form-little-squirrel-control" type="email" placeholder="Enter email " aria-label="email" name="Mail" /><img class="input-box-icon" src="~/jadoo/public/assets/img/cta/mail.svg" width="17" alt="mail" />
+                            <input class="form-control form-little-squirrel-control" type="email" placeholder="Enter email " aria-label="email" name="Email" /><img class="input-box-icon" src="~/jadoo/public/assets/img/cta/mail.svg" width="17" alt="mail" />
                         </div>
                     </div>
                     <div class="col-sm-auto">
@@ -25,7 +25,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    $('#subscriceForm').on('submit', function (e) {
+    $('#subscribeForm').on('submit', function (e) {
         e.preventDefault(); // Tarayıcının formu gönderdikten sonra yeniden yüklenmesini engelliyor
 
         $.post('@Url.Action("PartialSubscription", "Default")', $(this).serialize(), function (response) {
@@ -42,3 +42,4 @@
     });
 });
 </script>
+

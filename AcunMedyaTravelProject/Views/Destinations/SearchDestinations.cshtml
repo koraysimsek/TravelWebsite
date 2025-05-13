@@ -1,0 +1,48 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Destinations>
+
+@{
+    ViewBag.Title = "SearchDestinations";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>SearchDestinations</h2>
+
+<form method="get" action="/Destinations/SearchDestinations">
+    <div class="form-group">
+        <input type="text" class="form-control" style="width:256px" name="searchText" placeholder="Başlık veya Açıklamaya göre ara" value="@Request.QueryString["searchText"]" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ara</button>
+
+</form>
+
+<br />
+
+@if (Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ServicesID</th>
+                <th>Başlık</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.DestinationsID</td>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Hiç bir veri bulunamadı</div>
+}

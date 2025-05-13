@@ -1,0 +1,47 @@
+﻿@model List<AcunMedyaTravelProject.Entities.Testimonial>
+@{
+    ViewBag.Title = "SearchTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>SearchTestimonial</h2>
+
+<form method="get" action="/Testimonial/SearchTestimonial">
+    <div class="form-group">
+        <input type="text" class="form-control" style="width:270px" name="searchText" placeholder="Referans Adı veya Ünvana göre ara" value="@Request.QueryString["searchText"]" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ara</button>
+
+</form>
+
+<br />
+
+@if (Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ServicesID</th>
+                <th>Referans Adı</th>
+                <th>Ünvan</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TestimonialID</td>
+                    <td>@item.TestimonialName</td>
+                    <td>@item.Title</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Hiç bir veri bulunamadı</div>
+}
