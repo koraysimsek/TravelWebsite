@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
                 <h2 class="text-secondary lh-1-7 mb-7">Bilgi almak için abone olun</h2>
-                <form class="row g-3 align-items-center w-lg-75 mx-auto">
+                <form class="row g-3 align-items-center w-lg-75 mx-auto" id="subscribeForm">
                     <div class="col-sm">
                         <div class="input-group-icon">
                             <input class="form-control form-little-squirrel-control" type="email" placeholder="Enter email " aria-label="email" name="Mail" /><img class="input-box-icon" src="~/jadoo/public/assets/img/cta/mail.svg" width="17" alt="mail" />
@@ -25,19 +25,20 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    $('subscribeForm').on('submit', function (e) {
-        e.preventDefault();
-        $.post('@Url.Action("PartialSubscription", "Default")'.$this.serialize().function(response){
+    $('#subscriceForm').on('submit', function (e) {
+        e.preventDefault(); // Tarayıcının formu gönderdikten sonra yeniden yüklenmesini engelliyor
+
+        $.post('@Url.Action("PartialSubscription", "Default")', $(this).serialize(), function (response) {
             Swal.fire({
-                icon: 'succes',
+                icon: 'success',
                 title: 'Abone olundu',
                 text: response.message,
-                timer: 5000
-                timerProgressBar: true;
+                timer: 5000,
+                timerProgressBar: true,
                 showConfirmButton: false
-            });
-            setTimeout(() => location.reload(), 5000);
-            });
         });
-    }
+
+        setTimeout(() => location.reload(), 5000);
+    });
+});
 </script>

@@ -1,18 +1,28 @@
-﻿<div class="container">
-    <div class="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4"><img src="~/jadoo/public/assets/img/dest/shape.svg" alt="destination" /></div>
+﻿
+<div class="container">
+    <div class="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4"><img src="assets/img/dest/shape.svg" alt="destination" /></div>
     <div class="mb-7 text-center">
         <h5 class="text-secondary">Top Selling </h5>
-        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Top Destinations</h3>
+        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Turlar</h3>
     </div>
 
-    <div class="mt-3 text-center" mb-5>
-
-        <button class="btn-outline-primary me-2 filter-btn-active" data-category="all">All</button>
-        <button class="btn-outline-primary me-2 filter-btn-active" data-category="Europe">Europe</button>
-        <button class="btn-outline-primary me-2 filter-btn-active" data-category="Asia">Asia</button>
-        <button class="btn-outline-primary me-2 filter-btn-active" data-category="America">America</button>
-
+    <div class="mt-3 text-center mb-5">
+        <button class="btn btn-outline-primary me-2 filter-btn active" data-category="all">
+            All
+        </button>
+        <button class="btn btn-outline-primary me-2 filter-btn" data-category="Europe">
+            Europe
+        </button>
+        <button class="btn btn-outline-primary me-2 filter-btn" data-category="Asia">
+            Asia
+        </button>
+        <button class="btn btn-outline-primary me-2 filter-btn" data-category="America">
+            America
+        </button>
     </div>
+
+
+
 
     <div class="row">
         <div class="col-md-4 mb-4 destination-card" data-category="Europe">
@@ -26,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4 destination-card" data-category="Asia">
+        <div class="col-md-4 mb-4  destination-card" data-category="Asia">
             <div class="card overflow-hidden shadow">
                 <img class="card-img-top" src="~/jadoo/public/assets/img/dest/dest2.jpg" alt="London, UK" />
                 <div class="card-body py-4 px-3">
@@ -37,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4" destination-card data-category="Europe">
+        <div class="col-md-4 mb-4  destination-card" data-category="America">
             <div class="card overflow-hidden shadow">
                 <img class="card-img-top" src="~/jadoo/public/assets/img/dest/dest3.jpg" alt="Full Europe" />
                 <div class="card-body py-4 px-3">
@@ -51,18 +61,21 @@
     </div>
 </div>
 
-<script>
 
+<script>
+    //sayfa ilk yüklenildiğinde çalışıcak kodu temsil ediyor
     document.addEventListener('DOMContentLoaded', function () {
 
-        const filterButtons = document.querySelectorAll('.filter.btn');
-
+        //Tüm butonları bir değişkene atadık
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        //tüm kartları bir değişkene atadık
         const destinationCards = document.querySelectorAll('.destination-card');
 
+        //her filtre butonu için tıklama olayı tanımladık
         filterButtons.forEach(button => {
-            button.addEventListener('click', function(){
+            button.addEventListener('click', function () {
 
-                filterButtons.forEach(btn => btn.classList.remove('active')};
+                filterButtons.forEach(btn => btn.classList.remove('active'));
 
                 this.classList.add('active');
 
@@ -70,16 +83,21 @@
 
                 destinationCards.forEach(card => {
 
-                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    //eğer kategori all ise ya da kartın kategorisi seçilen kategoriye eşitse
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
 
-                    card.style.display = 'block';
-                }
-                else {
-                    card.style.display = 'none';
+                        card.style.display = 'block';
+                    }
+                    else {
+                        card.style.display = 'none';
                     }
                 });
-            });    
+            });
         });
     });
+
+
+
+
 
 </script>

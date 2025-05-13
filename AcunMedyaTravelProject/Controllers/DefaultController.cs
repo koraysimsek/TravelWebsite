@@ -53,7 +53,7 @@ namespace AcunMedyaTravelProject.Controllers
         }
 
         [HttpGet]
-        public PartialViewResult PartialSubscription(Subscription model)
+        public JsonResult PartialSubscription(Subscription model)
         {
             if (ModelState.IsValid)
             {
