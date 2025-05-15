@@ -51,6 +51,7 @@ namespace AcunMedyaTravelProject.Controllers
         public ActionResult UpdateDestinations(Destinations model)
         {
             var values = db.Destinations.Find(model.DestinationsID);
+            values.CategoryID = model.CategoryID;
             values.Title = model.Title;
             values.ImageURL = model.ImageURL;
             values.Description = model.Description;

@@ -4,18 +4,33 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>CreateDestinations</h2>
+<h2 class="mb-4">Seyahat Oluşturma</h2>
 
-<form method="post">
+<form method="post" style="max-width: 400px;">
+    <div class="mb-3">
+        <label for="CategoryID" class="form-label">CategoryID</label>
+        <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="CategoryID girin" />
+    </div>
 
-    <label>Başlık</label>
-    <input type="text" class="form-control" name="Title" style="width:200px" />
-    <label>Fotoğraf</label>
-    <input type="text" class="form-control" name="Description" style="width:200px" />
-    <label>Seyahat Ücreti</label>
-    <input type="text" class="form-control" name="ImageURL" style="width:200px" />
-    <label>Gün Sayısı</label>
-    <input type="text" class="form-control" name="ImageURL" style="width:200px" />
-    <button class="btn btn-success">Ekle</button>
+    <div class="mb-3">
+        <label for="Title" class="form-label">Başlık</label>
+        <input type="text" class="form-control" id="Title" name="Title" placeholder="Başlık girin" />
+    </div>
 
+    <div class="mb-3">
+        <label for="ImageURL" class="form-label">Fotoğraf URL</label>
+        <input type="text" class="form-control" id="ImageURL" name="ImageURL" placeholder="Fotoğraf linki girin" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Seyahat Ücreti</label>
+        <input type="number" class="form-control" id="Price" name="Price" placeholder="Ücreti girin" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Days" class="form-label">Gün Sayısı</label>
+        <input type="number" class="form-control" id="Days" name="Days" placeholder="Gün sayısını girin" />
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Ekle</button>
 </form>

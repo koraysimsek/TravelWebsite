@@ -4,12 +4,17 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>UpdateSponsor</h2>
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="text-center mb-4">Sponsor Güncelle</h2>
 
-<form method="post">
-    @Html.HiddenFor(x => x.SponsorID)
-    <label>Fotoğraf</label>
-    @Html.TextBoxFor(x => x.ImageURL)
-    <br />
-    <button>Güncelle</button>
-</form>
+    <form method="post">
+        @Html.HiddenFor(x => x.SponsorID)
+
+        <div class="form-group mb-4">
+            <label for="ImageURL" class="form-label">Fotoğraf URL</label>
+            @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control", placeholder = "Fotoğraf linkini girin" })
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Güncelle</button>
+    </form>
+</div>

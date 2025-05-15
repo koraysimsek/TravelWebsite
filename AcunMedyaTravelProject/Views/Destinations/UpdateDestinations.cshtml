@@ -4,21 +4,37 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Seyahat Güncelleme Sayfası</h2>
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="text-center mb-4">Seyahat Güncelle</h2>
 
-<form method="post">
-    @Html.HiddenFor(x => x.DestinationsID)
-    <label>Başlık</label>
-    @Html.TextBoxFor(x => x.Title)
-    <br />
-    <label>Fotoğraf</label>
-    @Html.TextBoxFor(x => x.ImageURL)
-    <br />
-    <label>Seyahat Ücreti</label>
-    @Html.TextBoxFor(x => x.Description)
-    <br />
-    <label>Gün Sayısı</label>
-    @Html.TextBoxFor(x => x.Description2)
-    <br />
-    <button>Güncelle</button>
-</form>
+    <form method="post">
+        @Html.HiddenFor(x => x.DestinationsID)
+
+        <div class="form-group mb-3">
+            <label for="CategoryID" class="form-label">CategoryID</label>
+            @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control", placeholder = "Hangi kategoride olduğunu girin" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Title" class="form-label">Başlık</label>
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", placeholder = "Seyahat başlığını girin" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="ImageURL" class="form-label">Fotoğraf URL</label>
+            @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control", placeholder = "Görsel linkini girin" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Description" class="form-label">Seyahat Ücreti</label>
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control", placeholder = "Ücreti girin (örn: 5000 ₺)" })
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="Description2" class="form-label">Gün Sayısı</label>
+            @Html.TextBoxFor(x => x.Description2, new { @class = "form-control", placeholder = "Kaç gün sürecek?" })
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Güncelle</button>
+    </form>
+</div>

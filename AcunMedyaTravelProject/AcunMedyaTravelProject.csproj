@@ -226,6 +226,7 @@
     <Content Include="jadoo\gulp\vendor.gulp.js" />
     <Content Include="jadoo\gulp\w3c.gulp.js" />
     <Content Include="jadoo\gulp\watch.gulp.js" />
+    <Content Include="jadoo\public\assets\css\login.css" />
     <Content Include="jadoo\public\assets\css\theme-rtl.css" />
     <Content Include="jadoo\public\assets\css\theme-rtl.min.css" />
     <Content Include="jadoo\public\assets\css\theme.css" />
@@ -304,9 +305,13 @@
     <Content Include="regal-1.0.0\docs\documentation.html" />
     <Content Include="regal-1.0.0\docs\documentation.js" />
     <Content Include="regal-1.0.0\gulpfile.js" />
+    <Content Include="regal-1.0.0\images\gotopage.png" />
+    <Content Include="regal-1.0.0\images\testimonial.png" />
     <Content Include="regal-1.0.0\images\auth\lockscreen-bg.jpg" />
     <Content Include="regal-1.0.0\images\auth\login-bg.jpg" />
     <Content Include="regal-1.0.0\images\auth\register-bg.jpg" />
+    <Content Include="regal-1.0.0\images\booking.png" />
+    <Content Include="regal-1.0.0\images\category.png" />
     <Content Include="regal-1.0.0\images\faces\face1.jpg" />
     <Content Include="regal-1.0.0\images\faces\face13.jpg" />
     <Content Include="regal-1.0.0\images\faces\face2.jpg" />
@@ -317,9 +322,15 @@
     <Content Include="regal-1.0.0\images\faces\face6.jpg" />
     <Content Include="regal-1.0.0\images\faces\face7.jpg" />
     <Content Include="regal-1.0.0\images\favicon.png" />
+    <Content Include="regal-1.0.0\images\home.png" />
+    <Content Include="regal-1.0.0\images\destinations.png" />
     <Content Include="regal-1.0.0\images\logo-dark.svg" />
     <Content Include="regal-1.0.0\images\logo-mini.svg" />
     <Content Include="regal-1.0.0\images\logo.svg" />
+    <Content Include="regal-1.0.0\images\dashboard.png" />
+    <Content Include="regal-1.0.0\images\subscription.png" />
+    <Content Include="regal-1.0.0\images\sponsor.png" />
+    <Content Include="regal-1.0.0\images\services.png" />
     <Content Include="regal-1.0.0\index.html" />
     <Content Include="regal-1.0.0\js\chart.js" />
     <Content Include="regal-1.0.0\js\dashboard.js" />
@@ -1197,6 +1208,9 @@
     <EmbeddedResource Include="Migrations\202505131806332_m12.resx">
       <DependentUpon>202505131806332_m12.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

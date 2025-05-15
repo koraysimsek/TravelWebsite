@@ -4,18 +4,28 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Referans Oluştur</h2>
+<h2 class="mb-4">Referans Oluştur</h2>
 
-<form method="post">
+<form method="post" style="max-width: 350px;">
+    <div class="mb-3">
+        <label for="TestimonialName" class="form-label">Referans Adı</label>
+        <input type="text" class="form-control" id="TestimonialName" name="TestimonialName" placeholder="Referans adını girin" />
+    </div>
 
-    <label>Referans Adı</label>
-    <input type="text" class="form-control" name="TestimonialName" style="width:200px" />
-    <label>Açıklama</label>
-    <input type="text" class="form-control" name="Description" style="width:200px" />
-    <label>Fotoğraf</label>
-    <input type="text" class="form-control" name="ImageURL" style="width:200px" />
-    <label>Ünvan</label>
-    <input type="text" class="form-control" name="Title" style="width:200px" />
-    <button class="btn btn-success">Referans Ekle</button>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Açıklama</label>
+        <input type="text" class="form-control" id="Description" name="Description" placeholder="Açıklama girin" />
+    </div>
 
+    <div class="mb-3">
+        <label for="ImageURL" class="form-label">Fotoğraf URL</label>
+        <input type="text" class="form-control" id="ImageURL" name="ImageURL" placeholder="Fotoğraf linkini girin" />
+    </div>
+
+    <div class="mb-4">
+        <label for="Title" class="form-label">Ünvan</label>
+        <input type="text" class="form-control" id="Title" name="Title" placeholder="Ünvan girin" />
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Referans Ekle</button>
 </form>

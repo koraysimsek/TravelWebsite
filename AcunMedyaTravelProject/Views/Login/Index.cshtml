@@ -8,63 +8,198 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Giriş Yap</title>
+    <title>Admin Paneli</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
         body {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,9,121,1) 37%, rgba(0,212,255,1) 94%);
+            color: #fff;
+            font-family: monospace, serif;
+            letter-spacing: 0.05em;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', sans-serif;
+            padding: 0 15px;
         }
 
-        .login-box {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
+        h1 {
+            font-size: 23px;
         }
 
-        .form-control:focus {
-            box-shadow: none;
-            border-color: #2575fc;
+        .form {
+            width: 300px;
+            padding: 64px 15px 24px;
+            margin: 0 auto;
         }
 
-        .btn-primary {
-            background-color: #2575fc;
-            border: none;
-        }
-
-            .btn-primary:hover {
-                background-color: #1a5fd0;
+            .form .control {
+                margin: 0 0 24px;
             }
+
+            .form input {
+                width: 100%;
+                padding: 14px 16px;
+                border: 0;
+                background: transparent;
+                color: #fff;
+                font-family: monospace, serif;
+                letter-spacing: 0.05em;
+                font-size: 16px;
+            }
+
+                .form input:hover,
+                .form input:focus {
+                    outline: none;
+                    border: 0;
+                }
+
+        .btn {
+            width: 100%;
+            display: block;
+            padding: 14px 16px;
+            background: transparent;
+            outline: none;
+            border: 0;
+            color: #fff;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        .block-cube {
+            position: relative;
+        }
+
+            .block-cube .bg-top {
+                position: absolute;
+                height: 10px;
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,9,121,1) 37%, rgba(0,212,255,1) 94%);
+                bottom: 100%;
+                left: 5px;
+                right: -5px;
+                transform: skew(-45deg, 0);
+            }
+
+            .block-cube .bg {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,9,121,1) 37%, rgba(0,212,255,1) 94%);
+            }
+
+            .block-cube .bg-right {
+                position: absolute;
+                background: rgba(0,212,255,1);
+                top: -5px;
+                z-index: 0;
+                bottom: 5px;
+                width: 10px;
+                left: 100%;
+                transform: skew(0, -45deg);
+            }
+
+            .block-cube .bg-inner {
+                background: #212121;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                right: 2px;
+                bottom: 2px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .block-cube .text {
+                position: relative;
+                z-index: 2;
+            }
+
+        .block-input input {
+            position: relative;
+            z-index: 2;
+        }
+
+        .block-input:focus .bg-inner,
+        .block-input:hover .bg-inner {
+            top: 100%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .block-input .bg-top,
+        .block-input .bg-right,
+        .block-input .bg {
+            background: rgba(255, 255, 255, 0.5);
+            transition: background 0.2s ease-in-out;
+        }
+
+        .block-input:focus .bg-top,
+        .block-input:hover .bg-top,
+        .block-input:focus .bg-right,
+        .block-input:hover .bg-right,
+        .block-input:focus .bg,
+        .block-input:hover .bg {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .credits {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .credits a {
+                opacity: 0.6;
+                color: #fff;
+                font-size: 11px;
+                text-decoration: none;
+            }
+
+                .credits a:hover {
+                    opacity: 1;
+                }
+
+        .alert {
+            font-family: monospace;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="login-box">
-        <h4 class="text-center mb-4">Giriş Yap</h4>
+    <form action="/Login/Index" method="post" autocomplete="off" class="form">
+        <div class="control">
+            <h1>Admin Paneline Giriş</h1>
+        </div>
 
-        <form action="/Login/Index" method="post">
-            <div class="mb-3">
-                <label for="username" class="form-label">Kullanıcı Adı</label>
-                <input type="text" class="form-control" id="username" name="UserName" required />
-            </div>
+        <div class="control block-cube block-input">
+            <input name="UserName" placeholder="Kullanıcı Adı" type="text" required />
+            <div class="bg-top"><div class="bg-inner"></div></div>
+            <div class="bg-right"><div class="bg-inner"></div></div>
+            <div class="bg"><div class="bg-inner"></div></div>
+        </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Parola</label>
-                <input type="password" class="form-control" id="password" name="Password" required />
-            </div>
+        <div class="control block-cube block-input">
+            <input name="Password" placeholder="Parola" type="password" required />
+            <div class="bg-top"><div class="bg-inner"></div></div>
+            <div class="bg-right"><div class="bg-inner"></div></div>
+            <div class="bg"><div class="bg-inner"></div></div>
+        </div>
 
-            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
-        </form>
+        <button type="submit" class="btn block-cube block-cube-hover">
+            <div class="bg-top"><div class="bg-inner"></div></div>
+            <div class="bg-right"><div class="bg-inner"></div></div>
+            <div class="bg"><div class="bg-inner"></div></div>
+            <div class="text">Giriş Yap</div>
+        </button>
 
         @if (!ViewData.ModelState.IsValid)
         {
@@ -78,9 +213,11 @@
             </div>
         }
 
-    </div>
+        
+    </form>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

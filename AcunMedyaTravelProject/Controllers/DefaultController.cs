@@ -45,7 +45,8 @@ namespace AcunMedyaTravelProject.Controllers
 
         public PartialViewResult PartialSlider()
         {
-            return PartialView();
+            var values = db.Slider.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialSponsor()

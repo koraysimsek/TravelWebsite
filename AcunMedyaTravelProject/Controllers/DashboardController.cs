@@ -16,7 +16,7 @@ namespace AcunMedyaTravelProject.Controllers
         public ActionResult Index()
         {
             //son eklenen 3 tur programı
-            //
+            ViewBag.Last3DestinationsName = db.Destinations.OrderByDescending(t => t.DestinationsID).Take(3).ToList();
             //toplam admin
             ViewBag.AdminsCount = db.Admins.Count();
             //toplam hizmet

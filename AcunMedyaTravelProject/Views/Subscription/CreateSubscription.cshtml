@@ -4,12 +4,13 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Abone Oluşturma Sayfası</h2>
+<h2 class="mb-4">Abonelik Oluşturma</h2>
 
-<form method="post">
+<form method="post" style="max-width: 300px;">
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Email adresinizi girin" style="width: 100%;" />
+    </div>
 
-    <label>Email</label>
-    <input type="text" class="form-control" name="Email" style="width:200px" />
-    <button class="btn btn-success">Abone Ekle</button>
-
+    <button type="submit" class="btn btn-success w-100">Abone Ekle</button>
 </form>

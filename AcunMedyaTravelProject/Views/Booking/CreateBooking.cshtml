@@ -4,16 +4,23 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>CreateBooking</h2>
+<h2 class="mb-4">Rezervasyon Oluştur</h2>
 
-<form method="post">
+<form method="post" style="max-width: 400px;">
+    <div class="mb-3">
+        <label for="Title" class="form-label">Başlık</label>
+        <input type="text" class="form-control" id="Title" name="Title" placeholder="Başlık girin" />
+    </div>
 
-    <label>Başlık</label>
-    <input type="text" class="form-control" name="Title" style="width:200px" />
-    <label>Açıklama</label>
-    <input type="text" class="form-control" name="Description" style="width:200px" />
-    <label>Fotoğraf</label>
-    <input type="text" class="form-control" name="ImageURL" style="width:200px" />
-    <button class="btn btn-success">Ekle</button>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Açıklama</label>
+        <input type="text" class="form-control" id="Description" name="Description" placeholder="Açıklama girin" />
+    </div>
 
+    <div class="mb-4">
+        <label for="ImageURL" class="form-label">Fotoğraf URL</label>
+        <input type="text" class="form-control" id="ImageURL" name="ImageURL" placeholder="Görsel linkini girin" />
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Ekle</button>
 </form>
