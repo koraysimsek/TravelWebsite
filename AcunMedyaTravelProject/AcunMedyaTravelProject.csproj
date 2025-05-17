@@ -258,6 +258,7 @@
     <Content Include="jadoo\public\assets\img\hero\hero-bg.svg" />
     <Content Include="jadoo\public\assets\img\hero\hero-img.png" />
     <Content Include="jadoo\public\assets\img\hero\play.svg" />
+    <Content Include="jadoo\public\assets\img\hero\main.png" />
     <Content Include="jadoo\public\assets\img\hero\seyahat sitesine kullanacağım eline bavulu sırtında çantası olan kadın bir seyahatçi.jpg" />
     <Content Include="jadoo\public\assets\img\hero\shape.svg" />
     <Content Include="jadoo\public\assets\img\icons\down.svg" />
@@ -275,6 +276,7 @@
     <Content Include="jadoo\public\assets\img\steps\building.svg" />
     <Content Include="jadoo\public\assets\img\steps\favorite-placeholder.png" />
     <Content Include="jadoo\public\assets\img\steps\heart.svg" />
+    <Content Include="jadoo\public\assets\img\steps\ingiltere.jpg" />
     <Content Include="jadoo\public\assets\img\steps\leaf.svg" />
     <Content Include="jadoo\public\assets\img\steps\map.svg" />
     <Content Include="jadoo\public\assets\img\steps\selection.svg" />

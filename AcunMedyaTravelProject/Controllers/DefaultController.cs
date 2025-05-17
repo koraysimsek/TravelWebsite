@@ -24,17 +24,20 @@ namespace AcunMedyaTravelProject.Controllers
 
         public PartialViewResult PartialDestination()
         {
-            return PartialView();
+            var values = db.Destinations.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialBooking()
         {
-            return PartialView();
+            var values = db.Bookings.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialTestimonial()
         {
-            return PartialView();
+            var values = db.Testimonials.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialService()
@@ -51,7 +54,8 @@ namespace AcunMedyaTravelProject.Controllers
 
         public PartialViewResult PartialSponsor()
         {
-            return PartialView();
+            var values = db.Sponsors.ToList();
+            return PartialView(values);
         }
 
         [HttpPost]
