@@ -4,9 +4,8 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Kategori</h2>
-
 <div class="container">
+    <h2 class="text-center my-4 p-3 bg-primary text-white rounded shadow">📂 Kategori Listesi</h2>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -35,8 +34,7 @@
 </div>
 
 <script>
-    function Delete(id)
-    {
+    function Delete(id) {
         Swal.fire({
             title: "Emin misin?",
             text: "Bu işlemi geri döndüremeyeceksin!",

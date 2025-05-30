@@ -3548,8 +3548,8 @@ textarea.form-control-lg {
 }
 
 .btn:hover {
-  color: #5E6282;
-  text-decoration: none;
+    color: #0000FF;
+    text-decoration: none;
 }
 
 .btn-check:focus + .btn, .btn:focus {
@@ -3570,11 +3570,11 @@ fieldset:disabled .btn {
   border-color: #43D7DB;
 }
 
-.btn-primary:hover {
-  color: #FFFEFE;
-  background-color: #cd8c01;
-  border-color: #c18401;
-}
+    .btn-primary:hover {
+        color: #FFFEFE;
+        background-color: #0000FF;
+        border-color: #0000FF;
+    }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #FFFEFE;
