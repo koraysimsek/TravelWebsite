@@ -75,3 +75,7 @@ Bu proje, Acunmedya Akademi’nin "C# Programlama" eğitimi kapsamında verilen 
 **Rezervasyonlar Oluşturma Sayfası**
 ![image](https://github.com/user-attachments/assets/fb284c41-f2ba-4f27-a4a9-addfcf0facec)
 
+**404 Hata Sayfası**
+![image](https://github.com/user-attachments/assets/522d3cae-3132-4254-a06c-d6648df9a4a6)
+
+
